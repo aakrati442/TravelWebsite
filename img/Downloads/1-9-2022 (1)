@@ -1,0 +1,36 @@
+HTML Form:-
+- Form is type of container in which if you want to get the
+details from user.
+- Details :- 
+Text
+Textbox- Email,password, 
+Radio - Gender
+Dropdownlist -- Country name
+state name
+city name
+FIleupload -- 
+Image
+Document
+- You can use more than one Form inside Html document.
+- Avoid Using Nesting of Forms
+-  If you are using more than one form then form must be uniquely
+identified.
+-Tag
+<form></form>
+-Attributes:-
+1. accept-charset -Used to accept the character encoding methods
+2. action - For Redirecting to page.
+3. name in form tag - Used to give name to the form.
+4. name in input tag - to get the data in the 
+form of url on other page.
+5. Query String:-
+? - Starting of Query String
+6. method :-
+get -- not secure
+- dont pass sensitive data
+- Small amount of data can be passed
+- 2048 Characters 
+post -- 
+7. Autocomplete
+8. novalidate
+..

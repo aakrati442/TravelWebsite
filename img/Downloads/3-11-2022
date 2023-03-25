@@ -1,0 +1,22 @@
+Regular Expression
+Syntax:-
+1. RegExp(pattern,Attributes)
+2. /pattern/Attributes
+Pattern :-
+Content ="Hello Sec-C"
+Pattern = /Sec/
+Attributes:-
+1. g - global search
+2. i - Case Insenitive search
+3. m - Multiline search
+
+Meta Characters:-
+1. d - Searching of digits
+2. D - Ignore Digits
+3. w - Ignore space and symbols 
+4. W - Ignore Alphabets and digits
+5. s - space 
+6. S - Ignore space
+
+Quantifiers:-
+1. 
