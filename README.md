@@ -3,7 +3,7 @@ This project is all about a fully responsive travel website which helps user to 
 
 Live link:- https://aakrati442.github.io/TravelWebsite/
 
-Developed and Designed by:- 
+Developed and Designed by:-                                    
 https://github.com/aakrati442  
                             https://github.com/PrashantKumarUpadhyay2504  
                             https://github.com/YashAgrawal213
