@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <link rel="icon" href="./favicon_io (1)/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- css -->
+    <style>
+  body {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-image: url(https://media.istockphoto.com/id/897409968/photo/summer-accessories-background.jpg?s=612x612&w=0&k=20&c=tEVauJCS5oMIRbu_9TccrgFKxMOI1m5L2kARSopI1-Q=);
+  background-size: cover;
+  background-size: 100%;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.app {
+  width: 90%;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.radio {
+  display: none;
+}
+.radio ~ span {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio:checked ~ span {
+  font-size: 4rem;
+}
+
+.contus{
+    width: 100%;
+    /* background-image: url("https://media1.thehungryjpeg.com/thumbs/800_3483618_94853b3b45b91264fd93c3171237c24cb20703df.jpg"); */
+    background-size: cover;
+    opacity: 1;
+    padding-bottom: 50px;  
+    padding-top: 50px;
+}
+.contuscontent{
+    color: black;
+    text-align: center;
+}
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 3px solid rgb(23, 98, 136); 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical ;
+    
+  }
+  input[type=email]{
+    width: 100%; 
+    padding: 12px; 
+    border: 3px solid rgb(40, 118, 158); 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical ;
+  }
+
+  .btn{
+    background-color: #17b1cf;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: green;
+  }
+
+  .container11 {
+    border-radius: 8px;
+    font-style: bolder;
+    padding: 20px;
+  }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="app">
+        <div class="contuscontent">
+            <h1 style="font-family: arial; font-style: italic;">&#10024 Let us know how we did &#10024</h1>
+            <br>
+        </div>
+        <h2> 😇 We'll be happy to read that 😇</h2>
+      
+        <div class="container">
+          <div class="item">
+            <label for="0">
+            <input class="radio" type="radio" name="feedback" id="0" value="0">
+            <span>😕</span>
+          </label>
+          </div>
+      
+          <div class="item">
+            <label for="1">
+            <input class="radio" type="radio" name="feedback" id="1" value="1">
+            <span>😐</span>
+          </label>
+          </div>
+      
+          <div class="item">
+            <label for="2">
+            <input class="radio" type="radio" name="feedback" id="2" value="2">
+            <span>😊</span>
+          </label>
+          </div>
+      
+          <div class="item">
+            <label for="3">
+            <input class="radio" type="radio" name="feedback" id="3" value="3">
+            <span>😁</span>
+          </label>
+          </div>
+      
+          <div class="item">
+            <label for="4">
+            <input class="radio" type="radio" name="feedback" id="4" value="4">
+            <span>😍</span>
+          </label>
+          </div>
+      
+        </div>
+      </div>
+
+      <div id="contact" class="contus" style="padding-right: 8%;">
+
+        <h1 style="font-family:Times New Roman; text-align: center; font-weight: bolder; ">Enter Your Details Here!</h1>
+        <br>
+        <div>
+    
+        </div>
+        <div class="container11"  >
+            <form action="" id="form">
+              <!-- <div class="alert">Your feedback is stored successfully !</div> -->
+            <label for="fname">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required style="background-color: rgba(0,0,0,0); "><br><br>
+            <label for="fname">Email</label>
+            <input type="email" id="email" name="name" placeholder="Your email id " required style="background-color: rgba(0,0,0,0);"><br><br>
+        
+            <label for="subject">Write your feedback here</label>
+            <textarea id="subject" name="subject" placeholder="Your query or suggestions" required style="height:200px; background-color: rgba(0,0,0,0);" ></textarea> 
+              <button class="btn" type="submit">Submit</button>
+            </form>
+            
+            </div>
+        <div>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>  -->
+        <script src="./firebase.js" type="module"></script>
+        <script type="module">
+          import{getDatabase,ref,get,set,update,remove,child} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-database.js";
+              const db=getDatabase();
+              var Name=document.getElementById("name");
+              var email=document.getElementById("email");
+              var subject=document.getElementById("subject");
+      
+              document.getElementById("form").addEventListener("submit",input);
+              var n,e,m;
+              function getData()
+              {
+                  n=Name.value;
+                  e=email.value;
+                  m=subject.value;
+              }
+      
+              function input(event){
+                  event.preventDefault();
+                  getData();
+                  set(ref(db,"Message/"+e.substring(0,e.indexOf('@'))),{
+                      Name:n,
+                      Email:e,
+                      subject:m
+                  }).then(()=>{
+                      alert("Message Sent Successfully");
+                      this.reset();
+                  }).catch((error)=>alert("unsuccessful",error));
+              }
+        </script>
+
+</body>
+</html>
