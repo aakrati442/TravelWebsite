@@ -1,0 +1,76 @@
+body{
+    background-image: url('https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table{
+    width: 72%;
+    padding-top: 10%;
+    margin: 40px auto;
+    border: none;
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    /* border: 1px solid rgb(204,200,200); */
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(132, 231, 138);
+}
+
+input[type="text"],input[type="number"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(40, 37, 37);
+    border-radius: 40px;
+    
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #73b2e4;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    /* border-color: black; */
+    border-radius: 300px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4ab438;
+}
+
+input[type="reset"]:hover{
+    background: #ef7276;
+}
+
+button{
+    background:#73b2e4;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background:#ef7276 ;
+}
+
