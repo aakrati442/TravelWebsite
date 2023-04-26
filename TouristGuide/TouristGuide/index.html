@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tourist Guide</title>
+
+    <link rel="icon" href="./favicon_io (1)/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+        body{
+            background-image: url(https://t4.ftcdn.net/jpg/04/37/31/59/360_F_437315955_rIBdhe2Jti7WGjhVRmReUtn4d68qgyGN.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100%;
+            margin-top: 10%;
+            margin-left: 33%;
+        }
+
+        .contus{
+    width: 100%;
+    background-size: cover;
+    opacity: 1;
+    padding-bottom: 50px;  
+    padding-top: 50px;
+}
+.contuscontent{
+    color: black;
+    text-align: center;
+}
+input[type=text], select {
+    width: 50%; 
+    padding: 12px; 
+    border: 3px solid rgb(23, 98, 136); 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical ;
+    
+    
+  }
+  input[type=email]{
+    width: 50%; 
+    padding: 12px; 
+    border: 3px solid rgb(40, 118, 158); 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical ;
+  }
+
+  .btn{
+    background-color: #17b1cf;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: green;
+  }
+
+  .container11 {
+    border-radius: 8px;
+    font-style: bolder;
+    padding: 20px;
+  }
+
+  #list{
+    width: 50%; 
+    padding: 12px; 
+    border: 3px solid rgb(23, 98, 136); 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical ;
+  }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container11"  >
+        <form action="" id="form">
+          
+        <label for="fname">Name</label>
+        <br><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required style="background-color: rgba(0,0,0,0); "><br><br>
+        <label for="fname">Email</label> <br><br>
+        <input type="email" id="email" name="name" placeholder="Your email id " required style="background-color: rgba(0,0,0,0);"><br><br>
+        <label> Select Guide </label> <br><br> 
+<select id="list" type="list" required style="background-color: rgba(0,0,0,0);">  
+<option  value = "G1"> Mr. Swapnil Singh  
+</option>  
+<option value = "G2"> Ms. Chahat Batra   
+</option>  
+<option value = "G3"> Ms. Aneesha Mittal 
+</option>  
+<option value = "G4"> Mr. Kunal Sharma 
+</option>  
+<option value = "G5"> Mr. Roshan Kumar 
+</option>  
+</select> <br><br>
+
+        
+          <button class="btn" type="submit">Submit</button>
+        </form>
+        
+        </div>
+    <div>
+
+        <script src="./firebase.js" type="module"></script>
+        <script type="module">
+            import{getDatabase,ref,get,set,update,remove,child} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-database.js";
+                const db=getDatabase();
+                var Name=document.getElementById("name");
+                var email=document.getElementById("email");
+                // var list=document.getElementById("list");
+        
+                document.getElementById("form").addEventListener("submit",input);
+                var n,e;
+                function getData()
+                {
+                    n=Name.value;
+                    e=email.value;
+                    // l=list.value;
+                }
+        
+                function input(event){
+                    event.preventDefault();
+                    getData();
+                    set(ref(db,"Message/"+e.substring(0,e.indexOf('@'))),{
+                        Name:n,
+                        Email:e,
+                        // list:l
+                    }).then(()=>{
+                        alert("Message Sent Successfully");
+                        this.reset();
+                    }).catch((error)=>alert("unsuccessful",error));
+                }
+          </script>
+
+</body>
+
+</html>
